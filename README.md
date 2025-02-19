@@ -1,3 +1,3 @@
 # Lab 4
-Name:\
-Help Received:
+Name:Samantha Jensen
+Help Received: Michael S, Joey R
