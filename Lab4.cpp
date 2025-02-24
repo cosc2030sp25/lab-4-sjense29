@@ -106,12 +106,20 @@ string stringReverse(string toReverse)
 bool parenCheck(string toCheck)
 {
   queue<char> checker; //declare my queue
-for (int i= 0; i< toCheck.length(); i++)
-	{
-	if ( toCheck   == '(')
-	{
+	for (int i= 0; i< toCheck.length(); i++)
+   {
+	if ( toCheck[i]   == '(') {
+		checker.push(toCheck[i]);
+	}
 	
+	else if (toCheck[i] == ')')
+	{
+	  if (checker.empty()) {
+	      return false;
 	}
-	}
-  return false; //need a return statement to compile
+  	//need a return statement to compile
+	 checker.pop();
+        }
+    }
+	return checker.empty();
 }
